@@ -1,24 +1,29 @@
-from os import *
+from os import system
 try:
-  from flask import Flask, send_file, request
-except:
-  system("pip install flask")
+    from flask import Flask, send_file, request
+except ModuleNotFoundError:
+    system("pip install flask")
+    from flask import Flask, send_file, request
 try:
   import requests
 except:
   system("pip install requests")
+  import requests
 try:
   from io import BytesIO
 except:
   system("pip install io")
+  from io import BytesIO
 try:
-  from time import *
+  from time import sleep
 except:
   system("pip install time")
+  from time import sleep
 try:
-  from threading import *
+  from threading import Thread
 except:
   system("pip install threading")
+  from threading import Thread
 
 id = 0
 link = ""
